@@ -14,9 +14,8 @@
 });
 
 function submitFormInsert() {
-    var descripcion = $("#descripcion").val();
     var comentario = $("#comentario").val();
-    var object = {"descripcion": descripcion, "comentario": comentario };
+    var object = {"comentario": comentario };
 
     console.log(object);
 
@@ -33,7 +32,7 @@ function submitFormInsert() {
          return response.text();
     })
         .then(function (data) {
-                 if (data === " 1") {
+                 if (data === "1") {
                      alert("Error al insertar");
               }
                  else {
@@ -43,6 +42,10 @@ function submitFormInsert() {
          .catch(function(err){
              console.error(err);
          });        
+}
+
+function formSuccess(){
+    alert("Datos almacenados");
 }
 
 

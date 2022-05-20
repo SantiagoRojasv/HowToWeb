@@ -5,7 +5,7 @@
     $productoDTO = json_decode($cuerpo);
 
     $productoDAO = new ProductoDAO();
-    $producto = new Producto($productoDTO->descripcion,$productoDTO->comentario,0);
+    $producto = new Producto(0,$productoDTO->comentario,0);
     $results = $productoDAO->create($producto);
     echo $results;
 

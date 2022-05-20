@@ -7,7 +7,7 @@ class ProductoDAO {
     private $connectionDB;
     private $dbCon;
     const CONSULTA = "SELECT p.idProducto, p.descripcion, p.comentario FROM producto p";
-    const INSERT = "INSERT INTO producto (descripcion, comentario) VALUES (?,?)";
+    const INSERT = "INSERT INTO producto (comentario) VALUES (?)";
     const UPDATE = "UPDATE producto SET descripcion = ?, comentario = ? WHERE idProducto = ?";
     const DELETE ="DELETE FROM producto WHERE idProducto = ?";
 
@@ -35,7 +35,7 @@ class ProductoDAO {
         $result=false;
         try{
             $statement=$this->dbCon->prepare(self::INSERT);
-            $statement->execute([$producto->descripcion, $producto->comentario]);
+            $statement->execute([$producto->comentario]);
             $result=true;
             $this->connectionD8->closeConnection();
         }catch(PDOException $ex){
