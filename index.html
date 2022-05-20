@@ -95,15 +95,21 @@
                 </div>
 
              
-                <div class="from">
-                    <form method="POST">
-                          <p>Comentario</p>
-                          <label for="comentario">Su comentario</label>
-                          <input type="text"name="comentario"placeholder="Comentario"required>
-                
-                          <input type="submit"value="Insertar">
-                    </form>
-              </div>
+                <form action=""id="productoForm" tittle="Insertar Producto">
+                    <div class="row">
+                        <div class="form-grup col-sm-6">
+                        <label for="producto" class="h3">Insertar Comentario</label>
+                        <br>
+                        <label for="descProducto" class="h4">Descripcion</label>
+                        <input type="text" class="form-control" id="descripcion" placeholder="Ingrese descripcion">
+                        <label for="duracion" class="h4">Costo</label>
+                        <input type="text" class="form-control" id="costo" placeholder="Ingrese costo" required>
+                        </div>
+                        </div>
+                        <button type="submit" id="form-submit" class="btn btn-success btn-lg pull-right">Enviar</button>
+                </form>
+                </div>
+                <p>Este el contenedor principal</p>
                 
                 <button type='button' onclick='submitFormUpdate("producto.js");' class='btn btn-info'>Comentar</td>
 
