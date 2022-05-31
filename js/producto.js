@@ -73,24 +73,18 @@ function submitConsulta() {
 function cargarDatos (data) {
     var rows = "";
     $("#dataTable tr").remove();
-    $("#dataTable").append('<tr><td>Id</td>' +
-        '<td>Descripción</td>' +
-        '<td>Comentarios</td>' +
-        '<td>Actualizar</td>' +
-        '<td>Eliminar</td>' +
+    $("#dataTable").append('<tr><td>Comentarios</td>' +
         "</tr>"
         );
     for (x in data) {
     rows +=`<tr row_id= ${data[x].idProducto}>`;
 
-    var idDes="D"+data[x].idProducto;
+  
     var idcomen="C"+data[x].idProducto;
 
-    rows +=`<td>${data[x].idProducto}`
-    rows +=`<td><id="${idDes}" value="${data[x].descripcion}" style="background-color:transparent; border:none;color: white;"></td>`
+
     rows +=`<td><input type="text" id="${idcomen}" value="${data[x].comentario}" style="background-color:transparent; border:none;color: white;"></td>`
-    rows +=`<td> <button type='button' onclick='submitFormUpdate(${data[x].idProducto});' class='btn btn-info'>Actualizar</td>`
-    rows +=`<td> <button type='button' onclick='submitFormDelete(${data[x].idProducto});' class='btn btn-danger'>Eliminar</td>`
+
     }
     $("#dataTable").append(rows);
 }
