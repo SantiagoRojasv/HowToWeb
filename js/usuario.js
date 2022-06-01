@@ -36,12 +36,13 @@ function submitFormInsert() {
                      alert("Error al insertar");
               }
                  else {
-                     alert("Producto registrado");
-              }
+                     alert("Comentario registrado");
+              }submitConsulta();  
          })
          .catch(function(err){
              console.error(err);
-         });        
+         });
+         submitConsulta();          
 }
 
 function formSuccess(){
@@ -89,38 +90,4 @@ function cargarDatos (data) {
     $("#dataTable").append(rows);
 }
 
-function submitFormUpdate(idProducto) {
-    idDes = "#D"+idProducto;
-    idcomen = "#C"+idProducto;
-
-    var descripcion = $(idDes).val();
-    var comentario = $(idcomen).val();
-
-    var object = {"descripcion": descripcion, "comentario": comentario, "idProducto":idProducto};
-
-    console.log(object);
-    fetch('http://localhost/HowToWeb/server/business/ProductoUpdate.php',{
-        method: 'PUT',
-        headers: {
-           'Content-Type' :  'application/json'
-        },
-        body: JSON.stringify(object),
-        cache: 'no-cache'
-   })
-       .then(function (response) {
-         console.log("entró");
-        return response.text();
-   })
-       .then(function (data) {
-                if (data == " 1") {
-                    formSucces("Error al actualizar");
-             }
-                else {
-                    alert("Producto actualizado");
-             }
-        })
-        .catch(function(err){
-            console.error(err);
-        });        
-}
 

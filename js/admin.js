@@ -37,11 +37,12 @@ function submitFormInsert() {
               }
                  else {
                      alert("Comentario registrado");
-              }
+              }submitConsulta();  
          })
          .catch(function(err){
              console.error(err);
-         });        
+         });  
+         submitConsulta();        
 }
 
 function formSuccess(){
