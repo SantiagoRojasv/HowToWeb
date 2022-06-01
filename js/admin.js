@@ -19,7 +19,7 @@ function submitFormInsert() {
 
     console.log(object);
 
-    fetch('http://localhost/TestPHP2/server/business/ProductoInsert.php', {
+    fetch('http://localhost/HowToWeb/server/business/ProductoInsert.php', {
          method: 'POST',
          headers: {
              'Content-Type': 'application/json'
@@ -52,7 +52,7 @@ function formSuccess(){
 
 function submitConsulta() {
     console.log("Entró a llamar");
-    fetch('http://localhost/TestPHP2/server/business/ProductoConsulta.php',{
+    fetch('http://localhost/HowToWeb/server/business/ProductoConsulta.php',{
         method: 'GET',
         headers: {
            'Content-Type' :  'application/json'
@@ -103,7 +103,7 @@ function submitFormUpdate(idProducto) {
     var object = {"descripcion": descripcion, "comentario": comentario, "idProducto":idProducto};
 
     console.log(object);
-    fetch('http://localhost/TestPHP2/server/business/ProductoUpdate.php',{
+    fetch('http://localhost/HowToWeb/server/business/ProductoUpdate.php',{
         method: 'PUT',
         headers: {
            'Content-Type' :  'application/json'
@@ -131,7 +131,7 @@ function submitFormUpdate(idProducto) {
 function submitFormDelete(idProducto) {
     console.log(idProducto);
     var object={"idProducto": idProducto};
-    fetch('http://localhost/TestPHP2/server/business/ProductoDelete.php',{
+    fetch('http://localhost/HowToWeb/server/business/ProductoDelete.php',{
         method: 'DELETE',
         headers: {
            'Content-Type' :  'application/json'

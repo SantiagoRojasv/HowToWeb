@@ -5,6 +5,6 @@
     $userSession = new UserSession();
     $userSession->closeSession();
 
-    header("Location: /TestPHP2");
+    header("Location: /HowToWeb");
 
 ?>
