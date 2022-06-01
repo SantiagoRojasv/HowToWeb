@@ -124,27 +124,3 @@ function submitFormUpdate(idProducto) {
         });        
 }
 
-function submitFormDelete(idProducto) {
-    console.log(idProducto);
-    var object={"idProducto": idProducto};
-    fetch('http://localhost/TestPHP2/server/business/ProductoDelete.php',{
-        method: 'DELETE',
-        headers: {
-           'Content-Type' :  'application/json'
-        },
-        body: JSON.stringify(object),
-        cache: 'no-cache'
-   })
-       .then(function (data) {
-                if (data === "1") {
-                    formSucces("Error al eliminar");
-             }
-                else {
-                    alert("Producto eliminado");
-             }submitConsulta();  
-        })
-        .catch(function(err){
-            console.error(err);
-        });    
-        submitConsulta();    
-}

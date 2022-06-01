@@ -36,7 +36,7 @@ function submitFormInsert() {
                      alert("Error al insertar");
               }
                  else {
-                     alert("Producto registrado");
+                     alert("Comentario registrado");
               }
          })
          .catch(function(err){
@@ -120,7 +120,7 @@ function submitFormUpdate(idProducto) {
                     formSucces("Error al actualizar");
              }
                 else {
-                    alert("Producto actualizado");
+                    alert("Comentario actualizado");
              }
         })
         .catch(function(err){
@@ -144,7 +144,7 @@ function submitFormDelete(idProducto) {
                     formSucces("Error al eliminar");
              }
                 else {
-                    alert("Producto eliminado");
+                    alert("Comentario eliminado");
              }submitConsulta();  
         })
         .catch(function(err){
