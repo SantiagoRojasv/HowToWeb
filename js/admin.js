@@ -74,7 +74,7 @@ function submitConsulta() {
 function cargarDatos (data) {
     var rows = "";
     $("#dataTable tr").remove();
-    $("#dataTable").append('<tr><td>Comentarios</td>' +
+    $("#dataTable").append('<tr><td>  COMENTARIOS:  </td>' +
         '<td>Actualizar</td>' +
         '<td>Eliminar</td>' +
         "</tr>"

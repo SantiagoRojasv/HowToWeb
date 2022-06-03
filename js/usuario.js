@@ -74,7 +74,7 @@ function submitConsulta() {
 function cargarDatos (data) {
     var rows = "";
     $("#dataTable tr").remove();
-    $("#dataTable").append('<tr><td>Comentarios</td>' +
+    $("#dataTable").append('<tr><td>  COMENTARIOS:  </td>' +
         "</tr>"
         );
     for (x in data) {
@@ -84,7 +84,7 @@ function cargarDatos (data) {
     var idcomen="C"+data[x].idProducto;
 
 
-    rows +=`<td><input type="text" id="${idcomen}" value="${data[x].comentario}" style="background-color:transparent; border:none;color: white;"></td>`
+    rows +=`<td><input type="text" id="${idcomen}" value="${data[x].comentario}" style="background-color:transparent; border:none; color: black;"></td>`
 
     }
     $("#dataTable").append(rows);
