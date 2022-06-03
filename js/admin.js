@@ -86,8 +86,13 @@ function cargarDatos (data) {
     var idcomen="C"+data[x].idProducto;
 
 
+
+    rows +=`<td><input type="text" id="${idcomen}" value="${data[x].comentario}" style="background-color:transparent; border:none;color: black;"></td>`
+    rows +=`<td> <button type='button' onclick='submitFormUpdate(${data[x].idProducto});' class='btn btn-primary'>Actualizar</td>`
+
     rows +=`<td><input type="text" id="${idcomen}" value="${data[x].comentario}" style="background-color:transparent; border:none;color: white;"></td>`
     rows +=`<td> <button type='button' onclick='submitFormUpdate(${data[x].idProducto});' class='btn btn-info'>Actualizar</td>`
+
     rows +=`<td> <button type='button' onclick='submitFormDelete(${data[x].idProducto});' class='btn btn-danger'>Eliminar</td>`
     }
     $("#dataTable").append(rows);
