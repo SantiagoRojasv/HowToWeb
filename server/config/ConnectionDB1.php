@@ -1,7 +1,7 @@
 <?php
 class Connection{
     private $dbhost ='localhost:3306';
-    private $dbname ='foro';
+    private $dbname ='foro1';
     private $dbuser ='root';
     private $dbpass ='';
     private $database = 'php_login_database';
